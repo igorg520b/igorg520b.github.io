@@ -81,6 +81,13 @@ h5 {
 
   <section>
   <div class="container my-5">
+    <h2>Abaqus simulations of fracture</h2>
+  </div>
+</section>
+
+
+  <section>
+  <div class="container my-5">
 
     <div class="row mb-3 py-2">
       <div class="col-lg-4 themed-grid-col">
@@ -130,7 +137,7 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbl1_1.mp4">582</a></td>
         <td><a href="video-batch3/nbl1_1.mp4">858</a></td>
-        <td><a href="video-batch5/nbl1_1.mp4">-</a></td>
+        <td><a href="video-batch5/nbl1_1.mp4">844</a></td>
       </tr>
       <tr>
         <th scope="row">2</th>
@@ -138,7 +145,7 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbl2_1.mp4">711</a></td>
         <td><a href="video-batch3/nbl2_1.mp4">663</a></td>
-        <td><a href="video-batch5/nbl2_1.mp4">-</a></td>
+        <td><a href="video-batch5/nbl2_1.mp4">996</a></td>
       </tr>
       <tr>
         <th scope="row">3</th>
@@ -146,7 +153,7 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbl3_1.mp4">774</a></td>
         <td><a href="video-batch3/nbl3_1.mp4">777</a></td>
-        <td><a href="video-batch5/nbl3_1.mp4">-</a></td>
+        <td><a href="video-batch5/nbl3_1.mp4">1049</a></td>
       </tr>
       <tr>
         <th scope="row">4</th>
@@ -154,7 +161,7 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbl4_1.mp4">825</a></td>
         <td><a href="video-batch3/nbl4_1.mp4">861</a></td>
-        <td><a href="video-batch5/nbl4_1.mp4">-</a></td>
+        <td><a href="video-batch5/nbl4_1.mp4">862</a></td>
       </tr>
       <tr>
         <th scope="row">5</th>
@@ -162,11 +169,47 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbl5_1.mp4">510</a></td>
         <td><a href="video-batch3/nbl5_1.mp4">684</a></td>
-        <td><a href="video-batch5/nbl5_1.mp4">-</a></td>
+        <td><a href="video-batch5/nbl5_1.mp4">938</a></td>
       </tr>
 
     </tbody>
   </table>
+
+
+  <div class="row mb-3 py-2">
+    <div class="col-lg-6 themed-grid-col">
+      <pre>
+        Paired T-Test and CI: Batch2, Batch3
+
+        Paired T for Batch2 - Batch3
+
+                    N   Mean  StDev  SE Mean
+        Batch2      5  680.4  131.6     58.9
+        Batch3      5  768.6   93.4     41.8
+        Difference  5  -88.2  133.4     59.7
+
+
+        95% CI for mean difference: (-253.8, 77.4)
+        T-Test of mean difference = 0 (vs ≠ 0): T-Value = -1.48  P-Value = 0.213
+      </pre>
+    </div>
+
+    <div class="col-lg-6 themed-grid-col">
+      <pre>
+      Paired T for Batch3 - Batch5
+
+                  N    Mean  StDev  SE Mean
+      Batch3      5   768.6   93.4     41.8
+      Batch5      5   937.8   87.0     38.9
+      Difference  5  -169.2  163.1     73.0
+
+
+      95% upper bound for mean difference: -13.7
+      T-Test of mean difference = 0 (vs < 0): T-Value = -2.32  P-Value = 0.041
+    </pre>
+    </div>
+  </div>
+
 
 </div>
 </section>
@@ -193,7 +236,7 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbl1_2.mp4">444</a></td>
         <td><a href="video-batch3/nbl1_2.mp4">462</a></td>
-        <td><a href="video-batch5/nbl1_2.mp4">-</a></td>
+        <td><a href="video-batch5/nbl1_2.mp4">1191</a></td>
       </tr>
       <tr>
         <th scope="row">7</th>
@@ -201,7 +244,7 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbl2_2.mp4">558</a></td>
         <td><a href="video-batch3/nbl2_2.mp4">579</a></td>
-        <td><a href="video-batch5/nbl2_2.mp4"></a></td>
+        <td><a href="video-batch5/nbl2_2.mp4">1191</a></td>
       </tr>
       <tr>
         <th scope="row">8</th>
@@ -209,7 +252,7 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbl3_2.mp4">516</a></td>
         <td><a href="video-batch3/nbl3_2.mp4">504</a></td>
-        <td><a href="video-batch5/nbl3_2.mp4"></a></td>
+        <td><a href="video-batch5/nbl3_2.mp4">916</a></td>
       </tr>
       <tr>
         <th scope="row">9</th>
@@ -217,7 +260,7 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbl4_2.mp4">339</a></td>
         <td><a href="video-batch3/nbl4_2.mp4">360</a></td>
-        <td><a href="video-batch5/nbl4_2.mp4"></a></td>
+        <td><a href="video-batch5/nbl4_2.mp4">822</a></td>
       </tr>
       <tr>
         <th scope="row">10</th>
@@ -225,13 +268,27 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbl5_2.mp4">588</a></td>
         <td><a href="video-batch3/nbl5_2.mp4">519</a></td>
-        <td><a href="video-batch5/nbl5_2.mp4"></a></td>
+        <td><a href="video-batch5/nbl5_2.mp4">898</a></td>
       </tr>
     </tbody>
   </table>
 
+  <div class="row mb-3 py-2">
+    <div class="col-lg-6 themed-grid-col">
+      <pre>
+      </pre>
+    </div>
+    <div class="col-lg-6 themed-grid-col">
+      <pre>
+    </pre>
+    </div>
+  </div>
+
 </div>
 </section>
+
+
+
 <section class="my-5" id="background">
 <div class="container">
 <h5>Rectangular block of double height; Indenter positioned at 1 m.</h5>
@@ -255,7 +312,7 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbh1_1.mp4">789</a></td>
         <td><a href="video-batch3/nbh1_1.mp4">864</a></td>
-        <td><a href="video-batch5/nbh1_1.mp4"></a></td>
+        <td><a href="video-batch5/nbh1_1.mp4">1107</a></td>
       </tr>
       <tr>
         <th scope="row">12</th>
@@ -263,7 +320,7 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbh2_1.mp4">846</a></td>
         <td><a href="video-batch3/nbh2_1.mp4">828</a></td>
-        <td><a href="video-batch5/nbh2_1.mp4"></a></td>
+        <td><a href="video-batch5/nbh2_1.mp4">956</a></td>
       </tr>
       <tr>
         <th scope="row">13</th>
@@ -271,7 +328,7 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbh3_1.mp4">807</a></td>
         <td><a href="video-batch3/nbh3_1.mp4">900</a></td>
-        <td><a href="video-batch5/nbh3_1.mp4"></a></td>
+        <td><a href="video-batch5/nbh3_1.mp4">1040</a></td>
       </tr>
       <tr>
         <th scope="row">14</th>
@@ -279,7 +336,7 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbh4_1.mp4">657</a></td>
         <td><a href="video-batch3/nbh4_1.mp4">789</a></td>
-        <td><a href="video-batch4/nbh4_1.mp4"></a></td>
+        <td><a href="video-batch4/nbh4_1.mp4">813</a></td>
       </tr>
       <tr>
         <th scope="row">15</th>
@@ -287,10 +344,22 @@ h5 {
         <td>1</td>
         <td><a href="video-batch2/nbh5_1.mp4">477</a></td>
         <td><a href="video-batch3/nbh5_1.mp4">900</a></td>
-        <td><a href="video-batch4/nbh5_1.mp4"></a></td>
+        <td><a href="video-batch4/nbh5_1.mp4">929</a></td>
       </tr>
     </tbody>
   </table>
+
+  <div class="row mb-3 py-2">
+    <div class="col-lg-6 themed-grid-col">
+      <pre>
+      </pre>
+    </div>
+    <div class="col-lg-6 themed-grid-col">
+      <pre>
+    </pre>
+    </div>
+  </div>
+
 
 </div>
 </section>
@@ -317,7 +386,7 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbh1_2.mp4">462</a></td>
         <td><a href="video-batch3/nbh1_2.mp4">567</a></td>
-        <td><a href="video-batch5/nbh1_2.mp4"></a></td>
+        <td><a href="video-batch5/nbh1_2.mp4">929</a></td>
       </tr>
       <tr>
         <th scope="row">17</th>
@@ -325,7 +394,7 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbh2_2.mp4">582</a></td>
         <td><a href="video-batch3/nbh2_2.mp4">552</a></td>
-        <td><a href="video-batch5/nbh2_2.mp4"></a></td>
+        <td><a href="video-batch5/nbh2_2.mp4">1089</a></td>
       </tr>
       <tr>
         <th scope="row">18</th>
@@ -333,7 +402,7 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbh3_2.mp4">543</a></td>
         <td><a href="video-batch3/nbh3_2.mp4">507</a></td>
-        <td><a href="video-batch5/nbh3_2.mp4"></a></td>
+        <td><a href="video-batch5/nbh3_2.mp4">729</a></td>
       </tr>
       <tr>
         <th scope="row">19</th>
@@ -341,7 +410,7 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbh4_2.mp4">390</a></td>
         <td><a href="video-batch3/nbh4_2.mp4">393</a></td>
-        <td><a href="video-batch5/nbh4_2.mp4"></a></td>
+        <td><a href="video-batch5/nbh4_2.mp4">1062</a></td>
       </tr>
       <tr>
         <th scope="row">20</th>
@@ -349,18 +418,57 @@ h5 {
         <td>2</td>
         <td><a href="video-batch2/nbh5_2.mp4">270</a></td>
         <td><a href="video-batch3/nbh5_2.mp4">594</a></td>
-        <td><a href="video-batch5/nbh5_2.mp4"></a></td>
+        <td><a href="video-batch5/nbh5_2.mp4">898</a></td>
       </tr>
-
     </tbody>
   </table>
 
+  <div class="row mb-3 py-2">
+    <div class="col-lg-6 themed-grid-col">
+      <pre>
+      </pre>
+    </div>
+    <div class="col-lg-6 themed-grid-col">
+      <pre>
+    </pre>
+    </div>
+  </div>
 
 </div>
 </section>
+
+  <section>
+  <div class="container my-5">
+    <h3>Keels</h3>
+
+    <div class="row mb-3 py-2">
+      <div class="col-lg-4 themed-grid-col">
+        <h5>Batch 2</h5>
+        <p>The force is applied to the surface nodes located between the angles of 30 and 46.5 degrees
+           (where 90 degrees is vertical and 0 degrees is horizontal). The force itself is applied at 40-degree angle.
+           The magnitude of the force is distributed in a bell-shaped way using normal
+         density function with &sigma;=[angle span]/6.</p>
+      </div>
+      <div class="col-lg-4 themed-grid-col">
+        <h5>Batch 3</h5>
+        <p>The force is applied at the same angles as in Batch 2, but the magnitude of the force is distributed <b>uniformly</b>.</p>
+      </div>
+      <div class="col-lg-4 themed-grid-col">
+        <h5>Batch 5</h5>
+        <p>The force is applied to the nodes between angles 13 and 29 degrees (more <b>horizontally</b> than previous batches).
+          The angle of force application is 68 degrees, and the magnitude is distributed uniformly.
+
+        </p>
+      </div>
+
+  </div>
+
+</div>
+</section>
+
+
 <section class="my-5" id="background">
 <div class="container">
-<h3>Keels</h3>
 <h5>Keel of 1-m height; Indenter positioned at the center.</h5>
 
   <table class="table">
@@ -381,7 +489,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/yn1.mp4">861</a></td>
         <td><a href="video-batch3/yn1.mp4">1155</a></td>
-        <td><a href="video-batch5/yn1.mp4"></a></td>
+        <td><a href="video-batch5/yn1.mp4">809</a></td>
       </tr>
       <tr>
         <th scope="row">22</th>
@@ -389,7 +497,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/yn2.mp4">585</a></td>
         <td><a href="video-batch3/yn2.mp4">762</a></td>
-        <td><a href="video-batch5/yn2.mp4"></a></td>
+        <td><a href="video-batch5/yn2.mp4">849</a></td>
       </tr>
       <tr>
         <th scope="row">23</th>
@@ -397,7 +505,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/yn3.mp4">1217</a></td>
         <td><a href="video-batch3/yn3.mp4">1149</a></td>
-        <td><a href="video-batch5/yn3.mp4"></a></td>
+        <td><a href="video-batch5/yn3.mp4">707</a></td>
       </tr>
       <tr>
         <th scope="row">24</th>
@@ -405,7 +513,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/yn4.mp4">1350</a></td>
         <td><a href="video-batch3/yn4.mp4">1335</a></td>
-        <td><a href="video-batch5/yn4.mp4"></a></td>
+        <td><a href="video-batch5/yn4.mp4">1018</a></td>
       </tr>
       <tr>
         <th scope="row">25</th>
@@ -413,7 +521,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/yn5.mp4">987</a></td>
         <td><a href="video-batch3/yn5.mp4">1176</a></td>
-        <td><a href="video-batch5/yn5.mp4"></a></td>
+        <td><a href="video-batch5/yn5.mp4"></a>787</td>
       </tr>
     </tbody>
   </table>
@@ -442,7 +550,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/yns1.mp4">1123</a></td>
         <td><a href="video-batch3/yns1.mp4">1227</a></td>
-        <td><a href="video-batch5/yns1.mp4"></a></td>
+        <td><a href="video-batch5/yns1.mp4">640</a></td>
       </tr>
       <tr>
         <th scope="row">27</th>
@@ -450,7 +558,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/yns2.mp4">918</a></td>
         <td><a href="video-batch3/yns2.mp4">1116</a></td>
-        <td><a href="video-batch5/yns2.mp4"></a></td>
+        <td><a href="video-batch5/yns2.mp4">396</a></td>
       </tr>
       <tr>
         <th scope="row">28</th>
@@ -458,7 +566,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/yns3.mp4">1163</a></td>
         <td><a href="video-batch3/yns3.mp4">1299</a></td>
-        <td><a href="video-batch5/yns3.mp4"></a></td>
+        <td><a href="video-batch5/yns3.mp4">547</a></td>
       </tr>
       <tr>
         <th scope="row">29</th>
@@ -466,7 +574,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/yns4.mp4">1117</a></td>
         <td><a href="video-batch3/yns4.mp4">996</a></td>
-        <td><a href="video-batch5/yns4.mp4"></a></td>
+        <td><a href="video-batch5/yns4.mp4">551</a></td>
       </tr>
       <tr>
         <th scope="row">30</th>
@@ -474,7 +582,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/yns5.mp4">414</a></td>
         <td><a href="video-batch3/yns5.mp4">615</a></td>
-        <td><a href="video-batch5/yns5.mp4"></a></td>
+        <td><a href="video-batch5/yns5.mp4">298</a></td>
       </tr>
 
     </tbody>
@@ -505,7 +613,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/wn1.mp4">873</a></td>
         <td><a href="video-batch3/wn1.mp4">1161</a></td>
-        <td><a href="video-batch5/wn1.mp4"></a></td>
+        <td><a href="video-batch5/wn1.mp4">818</a></td>
       </tr>
       <tr>
         <th scope="row">32</th>
@@ -513,7 +621,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/wn2.mp4">978</a></td>
         <td><a href="video-batch3/wn2.mp4">765</a></td>
-        <td><a href="video-batch5/wn2.mp4"></a></td>
+        <td><a href="video-batch5/wn2.mp4">618</a></td>
       </tr>
       <tr>
         <th scope="row">33</th>
@@ -521,7 +629,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/wn3.mp4">732</a></td>
         <td><a href="video-batch3/wn3.mp4">1071</a></td>
-        <td><a href="video-batch5/wn3.mp4"></a></td>
+        <td><a href="video-batch5/wn3.mp4">756</a></td>
       </tr>
       <tr>
         <th scope="row">34</th>
@@ -529,7 +637,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/wn4.mp4">732</a></td>
         <td><a href="video-batch3/wn4.mp4">927</a></td>
-        <td><a href="video-batch5/wn4.mp4"></a></td>
+        <td><a href="video-batch5/wn4.mp4">769</a></td>
       </tr>
       <tr>
         <th scope="row">35</th>
@@ -537,7 +645,7 @@ h5 {
         <td>center</td>
         <td><a href="video-batch2/wn5.mp4">1453</a></td>
         <td><a href="video-batch3/wn5.mp4">1926</a></td>
-        <td><a href="video-batch5/wn5.mp4"></a></td>
+        <td><a href="video-batch5/wn5.mp4">733</a></td>
       </tr>
 
     </tbody>
@@ -567,7 +675,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/wns1.mp4">930</a></td>
         <td><a href="video-batch3/wns1.mp4">1125</a></td>
-        <td><a href="video-batch5/wns1.mp4"></a></td>
+        <td><a href="video-batch5/wns1.mp4">404</a></td>
       </tr>
       <tr>
         <th scope="row">37</th>
@@ -575,7 +683,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/wns2.mp4">828</a></td>
         <td><a href="video-batch3/wns2.mp4">1125</a></td>
-        <td><a href="video-batch5/wns2.mp4"></a></td>
+        <td><a href="video-batch5/wns2.mp4">804</a></td>
       </tr>
       <tr>
         <th scope="row">38</th>
@@ -583,7 +691,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/wns3.mp4">414</a></td>
         <td><a href="video-batch3/wns3.mp4">1407</a></td>
-        <td><a href="video-batch5/wns3.mp4"></a></td>
+        <td><a href="video-batch5/wns3.mp4">302</a></td>
       </tr>
       <tr>
         <th scope="row">39</th>
@@ -591,7 +699,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/wns4.mp4">1317</a></td>
         <td><a href="video-batch3/wns4.mp4">1176</a></td>
-        <td><a href="video-batch5/wns4.mp4"></a></td>
+        <td><a href="video-batch5/wns4.mp4">796</a></td>
       </tr>
       <tr>
         <th scope="row">40</th>
@@ -599,7 +707,7 @@ h5 {
         <td>offset</td>
         <td><a href="video-batch2/wns5.mp4">957</a></td>
         <td><a href="video-batch3/wns5.mp4">1095</a></td>
-        <td><a href="video-batch5/wns5.mp4"></a></td>
+        <td><a href="video-batch5/wns5.mp4">467</a></td>
       </tr>
 
     </tbody>
