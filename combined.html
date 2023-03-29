@@ -1,0 +1,615 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Igor Gribanov">
+    <title>Abaqus simulations</title>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    a {color: rgba(0.1,0.1,0.1);
+    text-decoration: none;}
+    a:hover {
+      color: hotpink;
+      text-decoration: underline;
+    }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+body::before {
+  display: block;
+  content: '';
+  height: 60px;
+}
+h5 {
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<main>
+
+  <section>
+  <div class="container my-5">
+
+    <div class="row mb-3 py-2">
+      <div class="col-lg-4 themed-grid-col">
+        <h5>Batch 2</h5>
+        <p>The force is applied to the surface nodes located between the angles of 43.4 and 60.0 degrees
+           (where 90 degrees is vertical and 0 degrees is horizontal). The force itself is applied at 40-degree angle.
+           The magnitude of the force is distributed in a bell-shaped way using normal
+         density function with &sigma;=[angle span]/6.</p>
+      </div>
+      <div class="col-lg-4 themed-grid-col">
+        <h5>Batch 3</h5>
+        <p>The force is applied at the same angles as in Batch 2, but the magnitude of the force is distributed <b>uniformly</b>.</p>
+      </div>
+      <div class="col-lg-4 themed-grid-col">
+        <h5>Batch 5</h5>
+        <p>The force is applied to the nodes between angles 60 and 77 degrees (more vertically than previous batches).
+          The angle of force application is 68 degrees, and the magnitude is distributed uniformly.
+
+        </p>
+      </div>
+
+  </div>
+
+</div>
+</section>
+
+
+  <section class="my-5" id="background">
+  <div class="container">
+<h5>Rectangular block; Indenter positioned at 1 m.</h5>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Geom</th>
+        <th scope="col">Ind.Pos.</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td>1x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbl1_1.mp4">582</a></td>
+        <td><a href="video-batch3/nbl1_1.mp4">858</a></td>
+        <td><a href="video-batch5/nbl1_1.mp4">-</a></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td>1x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbl2_1.mp4">711</a></td>
+        <td><a href="video-batch3/nbl2_1.mp4">663</a></td>
+        <td><a href="video-batch5/nbl2_1.mp4">-</a></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td>1x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbl3_1.mp4">774</a></td>
+        <td><a href="video-batch3/nbl3_1.mp4">777</a></td>
+        <td><a href="video-batch5/nbl3_1.mp4">-</a></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td>1x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbl4_1.mp4">825</a></td>
+        <td><a href="video-batch3/nbl4_1.mp4">861</a></td>
+        <td><a href="video-batch5/nbl4_1.mp4">-</a></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td>1x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbl5_1.mp4">510</a></td>
+        <td><a href="video-batch3/nbl5_1.mp4">684</a></td>
+        <td><a href="video-batch5/nbl5_1.mp4">-</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</section>
+
+  <section class="my-5" id="background">
+  <div class="container">
+  <h5>Rectangular block; Indenter positioned at 2 m.</h5>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Geom</th>
+        <th scope="col">Ind.Pos.</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">6</th>
+        <td>1x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbl1_2.mp4">444</a></td>
+        <td><a href="video-batch3/nbl1_2.mp4">462</a></td>
+        <td><a href="video-batch5/nbl1_2.mp4">-</a></td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td>1x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbl2_2.mp4">558</a></td>
+        <td><a href="video-batch3/nbl2_2.mp4">579</a></td>
+        <td><a href="video-batch5/nbl2_2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td>1x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbl3_2.mp4">516</a></td>
+        <td><a href="video-batch3/nbl3_2.mp4">504</a></td>
+        <td><a href="video-batch5/nbl3_2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td>1x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbl4_2.mp4">339</a></td>
+        <td><a href="video-batch3/nbl4_2.mp4">360</a></td>
+        <td><a href="video-batch5/nbl4_2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td>1x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbl5_2.mp4">588</a></td>
+        <td><a href="video-batch3/nbl5_2.mp4">519</a></td>
+        <td><a href="video-batch5/nbl5_2.mp4"></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</section>
+<section class="my-5" id="background">
+<div class="container">
+<h5>Rectangular block of double height; Indenter positioned at 1 m.</h5>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Geom</th>
+        <th scope="col">Ind.Pos.</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">11</th>
+        <td>2x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbh1_1.mp4">789</a></td>
+        <td><a href="video-batch3/nbh1_1.mp4">864</a></td>
+        <td><a href="video-batch5/nbh1_1.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">12</th>
+        <td>2x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbh2_1.mp4">846</a></td>
+        <td><a href="video-batch3/nbh2_1.mp4">828</a></td>
+        <td><a href="video-batch5/nbh2_1.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">13</th>
+        <td>2x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbh3_1.mp4">807</a></td>
+        <td><a href="video-batch3/nbh3_1.mp4">900</a></td>
+        <td><a href="video-batch5/nbh3_1.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">14</th>
+        <td>2x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbh4_1.mp4">657</a></td>
+        <td><a href="video-batch3/nbh4_1.mp4">789</a></td>
+        <td><a href="video-batch4/nbh4_1.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">15</th>
+        <td>2x2.5</td>
+        <td>1</td>
+        <td><a href="video-batch2/nbh5_1.mp4">477</a></td>
+        <td><a href="video-batch3/nbh5_1.mp4">900</a></td>
+        <td><a href="video-batch4/nbh5_1.mp4"></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</section>
+<section class="my-5" id="background">
+<div class="container">
+<h5>Rectangular block of double height; Indenter positioned at 2 m.</h5>
+
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Geom</th>
+        <th scope="col">Ind.Pos.</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">16</th>
+        <td>2x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbh1_2.mp4">462</a></td>
+        <td><a href="video-batch3/nbh1_2.mp4">567</a></td>
+        <td><a href="video-batch5/nbh1_2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">17</th>
+        <td>2x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbh2_2.mp4">582</a></td>
+        <td><a href="video-batch3/nbh2_2.mp4">552</a></td>
+        <td><a href="video-batch5/nbh2_2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">18</th>
+        <td>2x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbh3_2.mp4">543</a></td>
+        <td><a href="video-batch3/nbh3_2.mp4">507</a></td>
+        <td><a href="video-batch5/nbh3_2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">19</th>
+        <td>2x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbh4_2.mp4">390</a></td>
+        <td><a href="video-batch3/nbh4_2.mp4">393</a></td>
+        <td><a href="video-batch5/nbh4_2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">20</th>
+        <td>2x2.5</td>
+        <td>2</td>
+        <td><a href="video-batch2/nbh5_2.mp4">270</a></td>
+        <td><a href="video-batch3/nbh5_2.mp4">594</a></td>
+        <td><a href="video-batch5/nbh5_2.mp4"></a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+</div>
+</section>
+<section class="my-5" id="background">
+<div class="container">
+<h3>Keels</h3>
+<h5>Keel of 1-m height; Indenter positioned at the center.</h5>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Geom</th>
+        <th scope="col">Ind.Pos.</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">21</th>
+        <td>Keel 1m</td>
+        <td>center</td>
+        <td><a href="video-batch2/yn1.mp4">861</a></td>
+        <td><a href="video-batch3/yn1.mp4">1155</a></td>
+        <td><a href="video-batch5/yn1.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">22</th>
+        <td>Keel 1m</td>
+        <td>center</td>
+        <td><a href="video-batch2/yn2.mp4">585</a></td>
+        <td><a href="video-batch3/yn2.mp4">762</a></td>
+        <td><a href="video-batch5/yn2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">23</th>
+        <td>Keel 1m</td>
+        <td>center</td>
+        <td><a href="video-batch2/yn3.mp4">1217</a></td>
+        <td><a href="video-batch3/yn3.mp4">1149</a></td>
+        <td><a href="video-batch5/yn3.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">24</th>
+        <td>Keel 1m</td>
+        <td>center</td>
+        <td><a href="video-batch2/yn4.mp4">1350</a></td>
+        <td><a href="video-batch3/yn4.mp4">1335</a></td>
+        <td><a href="video-batch5/yn4.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">25</th>
+        <td>Keel 1m</td>
+        <td>center</td>
+        <td><a href="video-batch2/yn5.mp4">987</a></td>
+        <td><a href="video-batch3/yn5.mp4">1176</a></td>
+        <td><a href="video-batch5/yn5.mp4"></a></td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</section>
+<section class="my-5" id="background">
+<div class="container">
+<h5>Keel of 1-m height; Indenter positioned at the side.</h5>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Geom</th>
+        <th scope="col">Ind.Pos.</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">26</th>
+        <td>Keel 1m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/yns1.mp4">1123</a></td>
+        <td><a href="video-batch3/yns1.mp4">1227</a></td>
+        <td><a href="video-batch5/yns1.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">27</th>
+        <td>Keel 1m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/yns2.mp4">918</a></td>
+        <td><a href="video-batch3/yns2.mp4">1116</a></td>
+        <td><a href="video-batch5/yns2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">28</th>
+        <td>Keel 1m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/yns3.mp4">1163</a></td>
+        <td><a href="video-batch3/yns3.mp4">1299</a></td>
+        <td><a href="video-batch5/yns3.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">29</th>
+        <td>Keel 1m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/yns4.mp4">1117</a></td>
+        <td><a href="video-batch3/yns4.mp4">996</a></td>
+        <td><a href="video-batch5/yns4.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">30</th>
+        <td>Keel 1m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/yns5.mp4">414</a></td>
+        <td><a href="video-batch3/yns5.mp4">615</a></td>
+        <td><a href="video-batch5/yns5.mp4"></a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+
+
+</div>
+</section>
+<section class="my-5" id="background">
+<div class="container">
+<h5>Keel of 2m height; Indenter positioned at the center.</h5>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Geom</th>
+        <th scope="col">Ind.Pos.</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">31</th>
+        <td>Keel 2m</td>
+        <td>center</td>
+        <td><a href="video-batch2/wn1.mp4">873</a></td>
+        <td><a href="video-batch3/wn1.mp4">1161</a></td>
+        <td><a href="video-batch5/wn1.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">32</th>
+        <td>Keel 2m</td>
+        <td>center</td>
+        <td><a href="video-batch2/wn2.mp4">978</a></td>
+        <td><a href="video-batch3/wn2.mp4">765</a></td>
+        <td><a href="video-batch5/wn2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">33</th>
+        <td>Keel 2m</td>
+        <td>center</td>
+        <td><a href="video-batch2/wn3.mp4">732</a></td>
+        <td><a href="video-batch3/wn3.mp4">1071</a></td>
+        <td><a href="video-batch5/wn3.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">34</th>
+        <td>Keel 2m</td>
+        <td>center</td>
+        <td><a href="video-batch2/wn4.mp4">732</a></td>
+        <td><a href="video-batch3/wn4.mp4">927</a></td>
+        <td><a href="video-batch5/wn4.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">35</th>
+        <td>Keel 2m</td>
+        <td>center</td>
+        <td><a href="video-batch2/wn5.mp4">1453</a></td>
+        <td><a href="video-batch3/wn5.mp4">1926</a></td>
+        <td><a href="video-batch5/wn5.mp4"></a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</section>
+<section class="my-5" id="background">
+<div class="container">
+<h5>Keel of 2m height; Indenter positioned at the side.</h5>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Geom</th>
+        <th scope="col">Ind.Pos.</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">36</th>
+        <td>Keel 2m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/wns1.mp4">930</a></td>
+        <td><a href="video-batch3/wns1.mp4">1125</a></td>
+        <td><a href="video-batch5/wns1.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">37</th>
+        <td>Keel 2m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/wns2.mp4">828</a></td>
+        <td><a href="video-batch3/wns2.mp4">1125</a></td>
+        <td><a href="video-batch5/wns2.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">38</th>
+        <td>Keel 2m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/wns3.mp4">414</a></td>
+        <td><a href="video-batch3/wns3.mp4">1407</a></td>
+        <td><a href="video-batch5/wns3.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">39</th>
+        <td>Keel 2m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/wns4.mp4">1317</a></td>
+        <td><a href="video-batch3/wns4.mp4">1176</a></td>
+        <td><a href="video-batch5/wns4.mp4"></a></td>
+      </tr>
+      <tr>
+        <th scope="row">40</th>
+        <td>Keel 2m</td>
+        <td>offset</td>
+        <td><a href="video-batch2/wns5.mp4">957</a></td>
+        <td><a href="video-batch3/wns5.mp4">1095</a></td>
+        <td><a href="video-batch5/wns5.mp4"></a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</section>
+
+</main>
+
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
