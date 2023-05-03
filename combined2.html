@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Igor Gribanov">
+    <title>Abaqus simulations</title>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+    a {color: rgba(0.1,0.1,0.1);
+    text-decoration: none;}
+    a:hover {
+      color: hotpink;
+      text-decoration: underline;
+    }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .b-example-divider {
+        height: 3rem;
+        background-color: rgba(0, 0, 0, .1);
+        border: solid rgba(0, 0, 0, .15);
+        border-width: 1px 0;
+        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+      }
+
+      .b-example-vr {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 100vh;
+      }
+
+      .bi {
+        vertical-align: -.125em;
+        fill: currentColor;
+      }
+
+      .nav-scroller {
+        position: relative;
+        z-index: 2;
+        height: 2.75rem;
+        overflow-y: hidden;
+      }
+
+      .nav-scroller .nav {
+        display: flex;
+        flex-wrap: nowrap;
+        padding-bottom: 1rem;
+        margin-top: -1px;
+        overflow-x: auto;
+        text-align: center;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+      }
+body::before {
+  display: block;
+  content: '';
+  height: 60px;
+}
+h5 {
+  font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+<main>
+
+  <section>
+  <div class="container my-5">
+    <h2>Abaqus simulations of fracture / Batches 3 and 5 only</h2>
+  </div>
+</section>
+
+
+  <section>
+  <div class="container my-5">
+
+    <div class="row mb-3 py-2">
+      <div class="col-lg-6 themed-grid-col">
+        <h5>Batch 3</h5>
+        <p>The force is applied to the surface nodes located between the angles of 43.4 and 60.0 degrees
+           (where 90 degrees is vertical and 0 degrees is horizontal). The force itself is applied at 40-degree angle.
+        The magnitude of the force is distributed uniformly.</p>
+      </div>
+      <div class="col-lg-6 themed-grid-col">
+        <h5>Batch 5</h5>
+        <p>The force is applied to the nodes between angles 60 and 77 degrees (more vertically than previous batches).
+          The angle of force application is 68 degrees, and the magnitude is distributed uniformly.</p>
+      </div>
+
+  </div>
+
+</div>
+</section>
+
+
+<section class="my-5"  >
+<div class="container">
+
+<h5>Rectangular block 1x2.5 m; Indenter positioned at 1 m.</h5>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">1</th>
+        <td><a href="video-batch3/nbl1_1.mp4">1326</a></td>
+        <td><a href="video-batch5/nbl1_1.mp4">853</a></td>
+      </tr>
+      <tr>
+        <th scope="row">2</th>
+        <td><a href="video-batch3/nbl2_1.mp4">999</a></td>
+        <td><a href="video-batch5/nbl2_1.mp4">1009</a></td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td><a href="video-batch3/nbl3_1.mp4">1098</a></td>
+        <td><a href="video-batch5/nbl3_1.mp4">1062</a></td>
+      </tr>
+      <tr>
+        <th scope="row">4</th>
+        <td><a href="video-batch3/nbl4_1.mp4">885</a></td>
+        <td><a href="video-batch5/nbl4_1.mp4">1880</a></td>
+      </tr>
+      <tr>
+        <th scope="row">5</th>
+        <td><a href="video-batch3/nbl5_1.mp4">1047</a></td>
+        <td><a href="video-batch5/nbl5_1.mp4">973</a></td>
+      </tr>
+      <tr>
+        <th scope="row">6</th>
+        <td><a href="video-batch3/nbl6_1.mp4">1615</a></td>
+        <td><a href="video-batch5/nbl6_1.mp4">950</a></td>
+      </tr>
+      <tr>
+        <th scope="row">7</th>
+        <td><a href="video-batch3/nbl7_1.mp4">910</a></td>
+        <td><a href="video-batch5/nbl7_1.mp4">1675</a></td>
+      </tr>
+      <tr>
+        <th scope="row">8</th>
+        <td><a href="video-batch3/nbl8_1.mp4">1135</a></td>
+        <td><a href="video-batch5/nbl8_1.mp4">1040</a></td>
+      </tr>
+      <tr>
+        <th scope="row">9</th>
+        <td><a href="video-batch3/nbl9_1.mp4">1325</a></td>
+        <td><a href="video-batch5/nbl9_1.mp4">1060</a></td>
+      </tr>
+      <tr>
+        <th scope="row">10</th>
+        <td><a href="video-batch3/nbl10_1.mp4">1400</a></td>
+        <td><a href="video-batch5/nbl10_1.mp4">1225</a></td>
+      </tr>
+      <tr>
+        <th scope="row">mean</th>
+        <th scope="row">1174.0</th>
+        <th scope="row">1173.0</th>
+      </tr>
+      <tr>
+        <th scope="row">stdev</th>
+        <th scope="row">235.4</th>
+        <th scope="row">336</th>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="row mb-3 py-2">
+    <div class="col-lg-12 themed-grid-col">
+      <pre>
+        Paired T for b3 - b5
+
+                     N  Mean  StDev  SE Mean
+        b3          10  1174    235       74
+        b5          10  1173    336      106
+        Difference  10     1    512      162
+
+
+        95% CI for mean difference: (-365, 367)
+        T-Test of mean difference = 0 (vs ≠ 0): T-Value = 0.01  P-Value = 0.994
+            </pre>
+    </div>
+  </div>
+
+</div>
+</section>
+
+
+
+
+<section class="my-5"  >
+<div class="container">
+<h5>Rectangular block 1x2.5m; Indenter positioned at 2 m.</h5>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Batch 3 Fracture Force, kN</th>
+      <th scope="col">Batch 5 Fracture Force, kN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="video-batch3/nbl1_2.mp4">477</a></td>
+      <td><a href="video-batch5/nbl1_2.mp4">1262</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="video-batch3/nbl2_2.mp4">639</a></td>
+      <td><a href="video-batch5/nbl2_2.mp4">1244</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="video-batch3/nbl3_2.mp4">516</a></td>
+      <td><a href="video-batch5/nbl3_2.mp4">924</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="video-batch3/nbl4_2.mp4">375</a></td>
+      <td><a href="video-batch5/nbl4_2.mp4">1613</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="video-batch3/nbl5_2.mp4">579</a></td>
+      <td><a href="video-batch5/nbl5_2.mp4">1258</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="video-batch3/nbl6_2.mp4">475</a></td>
+      <td><a href="video-batch5/nbl6_2.mp4">1130</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="video-batch3/nbl7_2.mp4">465</a></td>
+      <td><a href="video-batch5/nbl7_2.mp4">1105</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="video-batch3/nbl8_2.mp4">550</a></td>
+      <td><a href="video-batch5/nbl8_2.mp4">1245</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="video-batch3/nbl9_2.mp4">380</a></td>
+      <td><a href="video-batch5/nbl9_2.mp4">970</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="video-batch3/nbl10_2.mp4">490</a></td>
+      <td><a href="video-batch5/nbl10_2.mp4">1175</a></td>
+    </tr>
+    <tr>
+      <th scope="row">mean</th>
+      <th scope="row"> 494.6</th>
+      <th scope="row">1192.6</th>
+    </tr>
+    <tr>
+      <th scope="row">stdev</th>
+      <th scope="row">82.0</th>
+      <th scope="row">190.0</th>
+    </tr>
+  </tbody>
+</table>
+
+<div class="row mb-3 py-2">
+  <div class="col-lg-12 themed-grid-col">
+    <pre>
+
+    </pre>
+  </div>
+</div>
+
+
+</div>
+</section>
+
+
+
+<section class="my-5"  >
+<div class="container">
+<h5>Rectangular block of double height (2x2.5m); Indenter positioned at 1 m.</h5>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Batch 3 Fracture Force, kN</th>
+      <th scope="col">Batch 5 Fracture Force, kN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="video-batch3/nbh1_1.mp4">1404</a></td>
+      <td><a href="video-batch5/nbh1_1.mp4">1200</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="video-batch3/nbh2_1.mp4">1152</a></td>
+      <td><a href="video-batch5/nbh2_1.mp4">1333</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="video-batch3/nbh3_1.mp4">1071</a></td>
+      <td><a href="video-batch5/nbh3_1.mp4">1533</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="video-batch3/nbh4_1.mp4">830</a></td>
+      <td><a href="video-batch5/nbh4_1.mp4">1311</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="video-batch3/nbh5_1.mp4">1383</a></td>
+      <td><a href="video-batch5/nbh5_1.mp4">1213</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="video-batch3/nbh6_1.mp4">1080</a></td>
+      <td><a href="video-batch5/nbh6_1.mp4">1245</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="video-batch3/nbh7_1.mp4">1200</a></td>
+      <td><a href="video-batch5/nbh7_1.mp4">1135</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="video-batch3/nbh8_1.mp4">1245</a></td>
+      <td><a href="video-batch5/nbh8_1.mp4">1475</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="video-batch3/nbh9_1.mp4">950</a></td>
+      <td><a href="video-batch5/nbh9_1.mp4">1195</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="video-batch3/nbh10_1.mp4">1200</a></td>
+      <td><a href="video-batch5/nbh10_1.mp4">1135</a></td>
+    </tr>
+    <tr>
+      <th scope="row">mean</th>
+      <th scope="row">1151.5</th>
+      <th scope="row">1277.5</th>
+    </tr>
+    <tr>
+      <th scope="row">stdev</th>
+      <th scope="row">178.4</th>
+      <th scope="row">136.3</th>
+    </tr>
+  </tbody>
+</table>
+
+<div class="row mb-3 py-2">
+  <div class="col-lg-12 themed-grid-col">
+    <pre>
+      Paired T for b3 - b5
+
+                   N    Mean  StDev  SE Mean
+      b3          10  1151.5  178.4     56.4
+      b5          10  1277.5  136.3     43.1
+      Difference  10  -126.0  244.5     77.3
+
+
+      95% CI for mean difference: (-300.9, 48.9)
+      T-Test of mean difference = 0 (vs ≠ 0): T-Value = -1.63  P-Value = 0.138
+    </pre>
+  </div>
+</div>
+
+</div>
+</section>
+
+
+<section class="my-5"  >
+<div class="container">
+<h5>Rectangular block of double height (2x2.5m); Indenter positioned at 2 m.</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Batch 3 Fracture Force, kN</th>
+      <th scope="col">Batch 5 Fracture Force, kN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="video-batch3/nbh1_2.mp4">594</a></td>
+      <td><a href="video-batch5/nbh1_2.mp4">947</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="video-batch3/nbh2_2.mp4">651</a></td>
+      <td><a href="video-batch5/nbh2_2.mp4">1231</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="video-batch3/nbh3_2.mp4">588</a></td>
+      <td><a href="video-batch5/nbh3_2.mp4">880</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="video-batch3/nbh4_2.mp4">486</a></td>
+      <td><a href="video-batch5/nbh4_2.mp4">1084</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="video-batch3/nbh5_2.mp4">615</a></td>
+      <td><a href="video-batch5/nbh5_2.mp4">929</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="video-batch3/nbh6_2.mp4">500</a></td>
+      <td><a href="video-batch5/nbh6_2.mp4">1310</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="video-batch3/nbh7_2.mp4">510</a></td>
+      <td><a href="video-batch5/nbh7_2.mp4">1380</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="video-batch3/nbh8_2.mp4">695</a></td>
+      <td><a href="video-batch5/nbh8_2.mp4">1210</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="video-batch3/nbh9_2.mp4">595</a></td>
+      <td><a href="video-batch5/nbh9_2.mp4">1140</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="video-batch3/nbh10_2.mp4">535</a></td>
+      <td><a href="video-batch5/nbh10_2.mp4">1160</a></td>
+    </tr>
+    <tr>
+      <th scope="row">mean</th>
+      <th scope="row">576.9</th>
+      <th scope="row">1127.1</th>
+    </tr>
+    <tr>
+      <th scope="row">stdev</th>
+      <th scope="row">68.3</th>
+      <th scope="row">167.0</th>
+    </tr>
+  </tbody>
+</table>
+
+</div>
+</section>
+
+
+
+
+<section>
+<div class="container my-5">
+    <h3>Keels</h3>
+    <div class="row mb-3 py-2">
+      <div class="col-lg-6 themed-grid-col">
+        <h5>Batch 3</h5>
+        <p>The force is applied to the surface nodes located between the angles of 43 and 60 degrees
+           (where 90 degrees is vertical and 0 degrees is horizontal). The force itself is applied at 40-degree angle.
+           The magnitude of the force is distributed uniformly.</p>
+      </div>
+      <div class="col-lg-6 themed-grid-col">
+        <h5>Batch 5</h5>
+        <p>The force is applied to the nodes between angles 60 and 77 degrees.
+          The angle of force application is 68 degrees, and the magnitude is distributed uniformly.
+
+        </p>
+      </div>
+  </div>
+</div>
+</section>
+
+
+<section class="my-5"  >
+<div class="container">
+<h5>Keel of 1-m height; Indenter positioned at the center.</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Batch 3 Fracture Force, kN</th>
+      <th scope="col">Batch 5 Fracture Force, kN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="video-batch3/yn1.mp4">1170</a></td>
+      <td><a href="video-batch5/yn1.mp4">1360</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="video-batch3/yn2.mp4">1180</a></td>
+      <td><a href="video-batch5/yn2.mp4">1587</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="video-batch3/yn3.mp4">1185</a></td>
+      <td><a href="video-batch5/yn3.mp4">1280</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="video-batch3/yn4.mp4">1350</a></td>
+      <td><a href="video-batch5/yn4.mp4">1267</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="video-batch3/yn5.mp4">1248</a></td>
+      <td><a href="video-batch5/yn5.mp4">1427</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="video-batch3/yn6.mp4">1235</a></td>
+      <td><a href="video-batch5/yn6.mp4">1185</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="video-batch3/yn7.mp4">1255</a></td>
+      <td><a href="video-batch5/yn7.mp4">1685</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="video-batch3/yn8.mp4">1115</a></td>
+      <td><a href="video-batch5/yn8.mp4">1625</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="video-batch3/yn9.mp4">885</a></td>
+      <td><a href="video-batch5/yn9.mp4">1220</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="video-batch3/yn10.mp4">1200</a></td>
+      <td><a href="video-batch5/yn10.mp4">1905</a></td>
+    </tr>
+    <tr>
+      <th scope="row">mean</th>
+      <th scope="row">1182.3</th>
+      <th scope="row">1454.1</th>
+    </tr>
+    <tr>
+      <th scope="row">stdev</th>
+      <th scope="row">122.0</th>
+      <th scope="row">237.0</th>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<div class="row mb-3 py-2">
+  <div class="col-lg-12 themed-grid-col">
+    <pre>
+      Paired T for b3 - b5
+
+                   N    Mean  StDev  SE Mean
+      b3          10  1182.3  122.0     38.6
+      b5          10  1454.1  237.0     75.0
+      Difference  10  -271.8  251.2     79.4
+
+
+      95% CI for mean difference: (-451.5, -92.1)
+      T-Test of mean difference = 0 (vs ≠ 0): T-Value = -3.42  P-Value = 0.008
+    </pre>
+  </div>
+</div>
+
+
+
+
+</div>
+</section>
+
+
+<section class="my-5"  >
+<div class="container">
+<h5>Keel of 1-m height; Indenter positioned at the side.</h5>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Batch 3 Fracture Force, kN</th>
+      <th scope="col">Batch 5 Fracture Force, kN</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td><a href="video-batch3/yns1.mp4">1236</a></td>
+      <td><a href="video-batch5/yns1.mp4">1800</a></td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td><a href="video-batch3/yns2.mp4">1760</a></td>
+      <td><a href="video-batch5/yns2.mp4">1378</a></td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td><a href="video-batch3/yns3.mp4">1332</a></td>
+      <td><a href="video-batch5/yns3.mp4">1538</a></td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td><a href="video-batch3/yns4.mp4">1320</a></td>
+      <td><a href="video-batch5/yns4.mp4">1342</a></td>
+    </tr>
+    <tr>
+      <th scope="row">5</th>
+      <td><a href="video-batch3/yns5.mp4">1410</a></td>
+      <td><a href="video-batch5/yns5.mp4">1342</a></td>
+    </tr>
+    <tr>
+      <th scope="row">6</th>
+      <td><a href="video-batch3/yns6.mp4">1360</a></td>
+      <td><a href="video-batch5/yns6.mp4">1395</a></td>
+    </tr>
+    <tr>
+      <th scope="row">7</th>
+      <td><a href="video-batch3/yns7.mp4">875</a></td>
+      <td><a href="video-batch5/yns7.mp4">1855</a></td>
+    </tr>
+    <tr>
+      <th scope="row">8</th>
+      <td><a href="video-batch3/yns8.mp4">1645</a></td>
+      <td><a href="video-batch5/yns8.mp4">1330</a></td>
+    </tr>
+    <tr>
+      <th scope="row">9</th>
+      <td><a href="video-batch3/yns9.mp4">1440</a></td>
+      <td><a href="video-batch5/yns9.mp4">1360</a></td>
+    </tr>
+    <tr>
+      <th scope="row">10</th>
+      <td><a href="video-batch3/yns10.mp4">975</a></td>
+      <td><a href="video-batch5/yns10.mp4">1065</a></td>
+    </tr>
+    <tr>
+      <th scope="row">mean</th>
+      <th scope="row">1335.3</th>
+      <th scope="row">1440.5</th>
+    </tr>
+    <tr>
+      <th scope="row">stdev</th>
+      <th scope="row">267.8</th>
+      <th scope="row">234.7</th>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+<div class="row mb-3 py-2">
+  <div class="col-lg-12 themed-grid-col">
+    <pre>
+      Paired T for b3 - b5
+
+                   N    Mean  StDev  SE Mean
+      b3          10  1335.3  267.8     84.7
+      b5          10  1440.5  234.7     74.2
+      Difference  10    -105    405      128
+
+
+      95% CI for mean difference: (-395, 185)
+      T-Test of mean difference = 0 (vs ≠ 0): T-Value = -0.82  P-Value = 0.433
+    </pre>
+  </div>
+</div>
+
+
+</div>
+</section>
+
+
+
+
+<section class="my-5"  >
+<div class="container">
+<h5>Keel of 2m height; Indenter positioned at the center.</h5>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Elem. Size, mm</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">31</th>
+        <td>10.171</td>
+        <td><a href="video-batch2/wn1.mp4">873</a></td>
+        <td><a href="video-batch3/wn1.mp4">1160</a></td>
+        <td><a href="video-batch5/wn1.mp4">1507</a></td>
+      </tr>
+      <tr>
+        <th scope="row">32</th>
+        <td>10.196</td>
+        <td><a href="video-batch2/wn2.mp4">978</a></td>
+        <td><a href="video-batch3/wn2.mp4">1165</a></td>
+        <td><a href="video-batch5/wn2.mp4">1511</a></td>
+      </tr>
+      <tr>
+        <th scope="row">33</th>
+        <td>10.230</td>
+        <td><a href="video-batch2/wn3.mp4">732</a></td>
+        <td><a href="video-batch3/wn3.mp4">1218</a></td>
+        <td><a href="video-batch5/wn3.mp4">1191</a></td>
+      </tr>
+      <tr>
+        <th scope="row">34</th>
+        <td>10.138</td>
+        <td><a href="video-batch2/wn4.mp4">732</a></td>
+        <td><a href="video-batch3/wn4.mp4">1317</a></td>
+        <td><a href="video-batch5/wn4.mp4">920</a></td>
+      </tr>
+      <tr>
+        <th scope="row">35</th>
+        <td>10.297</td>
+        <td><a href="video-batch2/wn5.mp4">1453</a></td>
+        <td><a href="video-batch3/wn5.mp4">1926</a></td>
+        <td><a href="video-batch5/wn5.mp4">1196</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</section>
+
+
+<section class="my-5"  >
+<div class="container">
+<h5>Keel of 2m height; Indenter positioned at the side (offset 1m).</h5>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Elem. Size, mm</th>
+        <th scope="col">Batch 2 Fracture Force, kN</th>
+        <th scope="col">Batch 3 Fracture Force, kN</th>
+        <th scope="col">Batch 5 Fracture Force, kN</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">36</th>
+        <td>10.289</td>
+        <td><a href="video-batch2/wns1.mp4">930</a></td>
+        <td><a href="video-batch3/wns1.mp4">1125</a></td>
+        <td><a href="video-batch5/wns1.mp4">1849</a></td>
+      </tr>
+      <tr>
+        <th scope="row">37</th>
+        <td>10.194</td>
+        <td><a href="video-batch2/wns2.mp4">828</a></td>
+        <td><a href="video-batch3/wns2.mp4">1125</a></td>
+        <td><a href="video-batch5/wns2.mp4">1311</a></td>
+      </tr>
+      <tr>
+        <th scope="row">38</th>
+        <td>10.168</td>
+        <td><a href="video-batch2/wns3.mp4">414</a></td>
+        <td><a href="video-batch3/wns3.mp4">1407</a></td>
+        <td><a href="video-batch5/wns3.mp4">1329</a></td>
+      </tr>
+      <tr>
+        <th scope="row">39</th>
+        <td>10.230</td>
+        <td><a href="video-batch2/wns4.mp4">1317</a></td>
+        <td><a href="video-batch3/wns4.mp4">1176</a></td>
+        <td><a href="video-batch5/wns4.mp4">1800</a></td>
+      </tr>
+      <tr>
+        <th scope="row">40</th>
+        <td>10.139</td>
+        <td><a href="video-batch2/wns5.mp4">957</a></td>
+        <td><a href="video-batch3/wns5.mp4">1440</a></td>
+        <td><a href="video-batch5/wns5.mp4">1422</a></td>
+      </tr>
+
+    </tbody>
+  </table>
+
+</div>
+</section>
+
+</main>
+<script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
